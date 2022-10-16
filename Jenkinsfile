@@ -8,7 +8,6 @@ pipeline {
                 echo 'Hello World'
             }
         }
-      stages {
         stage('Checkout GIT') {
             steps {
                 echo 'Pulling...';
@@ -16,7 +15,6 @@ pipeline {
                 url : 'https://github.com/ChamesBenRezigueEsprit/Devops-Back.git'
             }
         }
-        stages {
         stage('Testing maven') {
             steps {
                 sh """mvn -version"""
